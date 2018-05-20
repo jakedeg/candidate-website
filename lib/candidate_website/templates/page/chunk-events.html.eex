@@ -1,29 +1,30 @@
 <%
-host_event_url = cond do
-  String.contains?(@name, "Robb") or String.contains?(@name, "Marc") ->
-    nil
-  true ->
-    "https://jdems.us/host"
-end
+host_event_url = "https://www.ocasio2018.com/events"
 %>
 
-<%
-host_event_base = if String.contains?(@name, "Robb") or String.contains?(@name, "Marc"),
-  do: "https://now.brandnewcongress.org/events/",
-else: "https://now.justicedemocrats.com/events/"
-%>
+# <%
+# host_event_base = if String.contains?(@name, "Robb") or String.contains?(@name, "Marc"),
+#   do: "https://now.brandnewcongress.org/events/",
+# else: "https://now.justicedemocrats.com/events/"
+# %>
 
-<div class="full-center" id="events">
-  <h1 style="color: <%= @primary_color %>; font-family: 'Montserrat'; font-weight: lighter; text-align: center;">
+<div id="event-header">
+  <h1 id="event-header-text" name="event-header-text" style="color: <%=@primary_color %>; text-align: center;">
     <%= if length(@events) > 0 do %>
       Attend an Upcoming Event
     <% else %>
       We Need You to Power this Revolution
-    <% end %>
+    <% end %></h1>
+</div>
+
+<div class="full-center" id="events">
+  <h1>
+
   </h1>
 
   <div class="event-box">
-    <%= for ev <- @events do %>
+<script src='https://actionnetwork.org/widgets/v3/event_campaign/ocasio2018-events?format=js&source=widget'></script><div id='can-event_campaign-area-ocasio2018-events' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
+    <!-- <%= for ev <- @events do %>
       <div class="event" onclick="window.open('<%= ev["browser_url"] %>')">
         <a href="<%= ev["browser_url"] %>" class="button" style="background-color: <%= @highlight_color %>">
           RSVP
@@ -33,7 +34,7 @@ else: "https://now.justicedemocrats.com/events/"
            <%= ev["date_line"] %> </p>
         </div>
       </div>
-    <% end %>
+    <% end %> -->
   </div>
 
   <%= if host_event_url != nil do %>
