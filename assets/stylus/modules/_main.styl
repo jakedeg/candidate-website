@@ -1,22 +1,51 @@
+// Global Variables
+primary_font_name = Roboto Slab
+secondary_font_name = Metropolis
+
+
+ @font-face
+   font-family secondary_font_name
+   font-weight 400
+   font-style normal
+   src url('../fonts/Metropolis-Regular.eot')
+   src url('../fonts/Metropolis-Regular.eot#iefix') format('embedded-opentype'), url('../fonts/Metropolis-Regular.woff') format('woff'), url('../fonts/Metropolis-Regular.ttf') format('truetype'), url('../fonts/Metropolis-Regular.woff2') format('woff2')
+
+ @font-face
+   font-family secondary_font_name
+   font-weight 600
+   font-style normal
+   src url('../fonts/Metropolis-SemiBold.eot')
+   src url('../fonts/Metropolis-SemiBold.eot#iefix') format('embedded-opentype'), url('../fonts/Metropolis-SemiBold.woff') format('woff'), url('../fonts/Metropolis-SemiBold.ttf') format('truetype'), url('../fonts/Metropolis-SemiBold.woff2') format('woff2')
+
+ @font-face
+   font-family secondary_font_name
+   font-weight 700
+   font-style normal
+   src url('../fonts/Metropolis-Bold.eot')
+   src url('../fonts/Metropolis-Bold.eot#iefix') format('embedded-opentype'), url('../fonts/Metropolis-Bold.woff') format('woff'), url('../fonts/Metropolis-Bold.ttf') format('truetype'), url('../fonts/Metropolis-Bold.woff2') format('woff2')
+
+ .ingeo
+   font-family Geo
+
 div
   padding-top 0px
 
 h1
-  font-family Roboto Slab
+  font-family primary_font_name
   font-weight bold
   font-size 40px
   color #3C2D82
   margin auto
 
 h2
-  font-family Roboto Slab
+  font-family primary_font_name
   font-weight bold
   font-size 1.6em
   color #3C2D82
   margin auto
 
 h3
-  font-family Roboto Slab
+  font-family primary_font_name
   font-weight bold
   font-size 2em
   color #ffffff
@@ -24,7 +53,7 @@ h3
   margin auto
 
 p
-  font-family Proxima Nova
+  font-family secondary_font_name
   font-weight regular
   font-size 20px
   line-height 1.4
@@ -62,13 +91,13 @@ p
 
     #join
       background-color hsla(0,0%,100%,.1)
-      font-family Proxima Nova
+      font-family secondary_font_name
       font-weight 600
       max-width 351px
 
       #join-prompt
         font-size 28px
-        font-family Roboto Slab, serif
+        font-family primary_font_name, serif
         font-weight bold
         text-align center
         margin-top -10px
@@ -86,7 +115,7 @@ p
 
         #join-submit
           color #FFFFFF
-          font-family Proxima Nova
+          font-family secondary_font_name
           font-size 13px
           font-weight 600
           line-height 23px
@@ -122,7 +151,7 @@ p
       text-transform uppercase
       color #3C2D82
       padding 1rem 1rem !important // Countering stupid CSS
-      font-family Proxima Nova
+      font-family secondary_font_name
       font-size 17px
       cursor pointer
       font-weight bold
@@ -211,18 +240,41 @@ p
     flex-direction(column)
     width 40%
 
+    h1
+      margin-bottom 33px
+
     #issues-header
-    	font-family Roboto Slab
+    	font-family primary_font_name
     	line-height 45px
-      margin-bottom 2em
 
     #issues-paragraph
-      font-family Proxima Nova
+      font-family secondary_font_name
       font-size 20px
       line-height 29px
 
+    #issues-button-container
+      padding 4em 0 5em 0
+      margin 0 auto
+
+      #issues-cta-button
+        background-color: #3c2d82;
+        padding: 1em 2em 2em 2em;
+        font-family: Proxima Nova;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: center;
+        vertical-align: middle;
+
   #issues-separator
     width 10%
+
+.mobile
+  #chunk-issues
+    #issues-text
+      width auto
+    #issues-separator
+      width 0
 
 // Why Support Shortened //
 
@@ -235,7 +287,7 @@ p
 
   #shortened-support-header
     color #3C2D82
-    font-family Roboto Slab
+    font-family primary_font_name
     font-size 64px
     font-weight bold
     line-height 76px
@@ -274,7 +326,7 @@ p
 
       #why-support-cta
         color #FFFFFF
-        font-family Proxima Nova
+        font-family secondary_font_name
         font-size 14px
         font-weight bold
         line-height 17px
@@ -399,7 +451,7 @@ p
 
         .plank-header-text
           font-size 36px
-          font-family Roboto Slab
+          font-family primary_font_name
           text-align center
           font-weight bold
           color #3C2D82
@@ -422,7 +474,7 @@ p
 
         .plank-cta
           color: #3C2D82;
-          font-family Proxima Nova
+          font-family secondary_font_name
           font-size 14px
           font-weight bold
           text-transform uppercase
@@ -437,7 +489,7 @@ p
       // border-radius 3px;
       // box-shadow 0 2px 4px 0 rgba(0,0,0,0.5), 2px 2px 6px 0 rgba(0,0,0,0.5)
       padding 1em 2em 2em 2em
-      font-family Proxima Nova
+      font-family secondary_font_name
       font-size 18px
       font-weight 600
       line-height 18px
@@ -446,7 +498,7 @@ p
       &:hover
         background-color rgb(140, 116, 255)
 
-// Mews Chunk //
+// News Chunk //
 
 #chunk-news
   flexbox(flex)
@@ -463,7 +515,7 @@ p
       // border-radius 3px;
       // box-shadow 0 2px 4px 0 rgba(0,0,0,0.5), 2px 2px 6px 0 rgba(0,0,0,0.5)
       padding 1em 2em 2em 2em
-      font-family Proxima Nova
+      font-family secondary_font_name
       font-size 18px
       font-weight 600
       line-height 18px
@@ -510,7 +562,7 @@ p
         h2
           color #3C2D82
           font-size 36px !important
-          font-family Roboto Slab
+          font-family primary_font_name
           font-weight bold
           text-align left
           line-height 36px !important // potentially redundant
@@ -520,6 +572,25 @@ p
 
         p
           font-size 1em
+
+// Twitter Chunk //
+
+#chunk-twitter
+  background-color #FFFFFF;
+  padding-top 75px
+  padding-bottom 75px
+
+  img
+    border-radius 50%
+    display inline-block
+    width 300px
+
+  #twitter-feed
+    display inline-block
+    width 66%
+    margin-left 75px
+
+
 
 // Endorsements Chunk //
 
@@ -569,7 +640,7 @@ p
       // border-radius 3px;
       // box-shadow 0 2px 4px 0 rgba(0,0,0,0.5), 2px 2px 6px 0 rgba(0,0,0,0.5)
       padding 1em 2em 2em 2em
-      font-family Proxima Nova
+      font-family secondary_font_name
       font-size 18px
       font-weight 600
       line-height 18px
@@ -607,7 +678,7 @@ p
   input[type="submit"]
     width 100%
 
-// Footer BLock
+// Footer Block
 
 #footer
   flexbox(flex)
@@ -616,11 +687,13 @@ p
   justify-content(space-between)
   background-color #3C2D82
   font-size 16px
-  line-height 16px
+  line-height 1.5em
   padding 50px 10% !important
 
   a
     color #ffffff !important
+    font-weight: bold
+    vertical-align: top
 
   #paid-for-container
     #paid-for
@@ -630,7 +703,7 @@ p
       text-align center
       max-width 440px
       color #FFFFFF
-      font-family Proxima Nova
+      font-family secondary_font_name
 
   #privacy-policy-container
     flexbox(flex)
@@ -640,13 +713,14 @@ p
   #email-us
     flexbox(flex)
     flex-direction(column)
-    align-items(left)
+    align-items(center)
     color #FFFFFF
+
 
 .more-about
   display inline
   font-size 1em
-  font-family Roboto Slab
+  font-family primary_font_name
   font-weight bold
   color #3C2D82
   margin-top 10px
@@ -714,7 +788,7 @@ p
 #name
   font-size 46px
   text-transform uppercase
-  font-family Proxima Nova
+  font-family secondary_font_name
   font-weight 900
   flexbox(flex)
   flex-direction(column)
